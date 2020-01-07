@@ -6,7 +6,7 @@ export const ProductList = styled.ul`
   grid-gap: 20px;
   list-style: none;
 
-  li {
+  /* li {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -64,5 +64,5 @@ export const ProductList = styled.ul`
         font-weight: bold;
       }
     }
-  }
+  } */
 `;
