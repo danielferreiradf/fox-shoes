@@ -11,8 +11,9 @@ export default createGlobalStyle`
     }
 
     body {
-        background: #191920 url(${background}) no-repeat center top;
+        background: #191920 url(${background}) no-repeat top center/cover ;
         -webkit-font-smoothing: antialiased;
+        width: 100%;
     }
 
     body, input, button {
