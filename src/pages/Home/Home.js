@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import api from "../../services/api";
-import { formatPrice } from "../../utils/format";
 
 import ProductItem from "../../components/ProductItem/ProductItem";
 
