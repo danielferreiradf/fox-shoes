@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
+import { formatPrice } from "../../utils/format";
 import CartProductItem from "../../components/CartProductItem/CartProductItem";
 import { Container, ProductTable, Total } from "./styles";
 
 const Cart = () => {
   const cartItems = useSelector(state => state.cart);
+  const [cartTotal, setCartTotal] = useState(0);
+
+  useEffect(() => {
+    // Calculate total of items in cart
+    const amount = cartItems.reduce((total, item) => {
+      return (total += item.price * item.amount);
+    }, 0);
+    setCartTotal(amount);
+  }, [cartItems]);
 
   return (
     <Container>
@@ -31,7 +41,7 @@ const Cart = () => {
 
         <Total>
           <span>TOTAL</span>
-          <strong>R$ 1920,20</strong>
+          <strong>{formatPrice(cartTotal)}</strong>
         </Total>
       </footer>
     </Container>

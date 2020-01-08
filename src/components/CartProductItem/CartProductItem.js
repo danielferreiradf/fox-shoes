@@ -1,4 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeFromCart, updateAmount } from "../../redux/cart/cartActions";
+
+import { formatPrice } from "../../utils/format";
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
@@ -7,6 +11,18 @@ import {
 import { ProductCart } from "./styles";
 
 const CartProductItem = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const productSubtotal = formatPrice(product.amount * product.price);
+
+  const changeProductAmount = (product, option) => {
+    if (option === "increment") {
+      dispatch(updateAmount(product.id, product.amount + 1));
+    } else if (option === "decrement") {
+      dispatch(updateAmount(product.id, product.amount - 1));
+    }
+  };
+
   return (
     <ProductCart>
       <td>
@@ -18,20 +34,31 @@ const CartProductItem = ({ product }) => {
       </td>
       <td>
         <div>
-          <button type="button">
+          <button
+            type="button"
+            onClick={() => changeProductAmount(product, "decrement")}
+          >
             <MdRemoveCircleOutline size={20} color="#7159c1" />
           </button>
+
           <input type="number" readOnly value={product.amount} />
-          <button type="button">
+
+          <button
+            type="button"
+            onClick={() => changeProductAmount(product, "increment")}
+          >
             <MdAddCircleOutline size={20} color="#7159c1" />
           </button>
         </div>
       </td>
       <td>
-        <strong>R$ 258,80</strong>
+        <strong>{productSubtotal}</strong>
       </td>
       <td>
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => dispatch(removeFromCart(product.id))}
+        >
           <MdDelete size={20} color="#7159c1" />
         </button>
       </td>

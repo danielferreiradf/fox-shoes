@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cart/cartActions";
 
 import { formatPrice } from "../../utils/format";
-
 import { MdAddShoppingCart } from "react-icons/md";
 import { ProductCard } from "./styles";
 
@@ -12,20 +12,13 @@ const ProductItem = ({ product }) => {
   // Memoizing item price
   const price = useMemo(() => formatPrice(product.price));
 
-  const handleAddProduct = product => {
-    dispatch({
-      type: "ADD_TO_CART",
-      payload: { ...product, formattedPrice: price }
-    });
-  };
-
   return (
     <ProductCard>
       <img src={product.image} alt={product.title} />
       <strong>{product.title}</strong>
       <span>{price}</span>
 
-      <button type="button" onClick={() => handleAddProduct(product)}>
+      <button type="button" onClick={() => dispatch(addToCart(product))}>
         <div>
           <MdAddShoppingCart size={16} color="#fff" />
         </div>
