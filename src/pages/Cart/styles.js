@@ -22,7 +22,7 @@ export const Container = styled.div`
       transition: filter 0.3s;
 
       &:hover {
-        filter: saturate(3);
+        filter: brightness(125%);
       }
     }
   }
@@ -31,50 +31,10 @@ export const Container = styled.div`
 export const ProductTable = styled.table`
   width: 100%;
   thead th {
-    color: #999;
+    color: ${props => props.theme.color2};
     text-align: left;
     padding: 12px;
   }
-
-  /* tbody td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-  }
-
-  img {
-    height: 100px;
-  }
-
-  strong {
-    color: #333;
-    display: block;
-  }
-
-  span {
-    display: block;
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-
-    input {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      color: #666;
-      padding: 6px;
-      width: 50px;
-    }
-  }
-
-  button {
-    background: none;
-    border: 0;
-    padding: 6px;
-  } */
 `;
 
 export const Total = styled.div`
@@ -82,7 +42,7 @@ export const Total = styled.div`
   align-items: baseline;
 
   span {
-    color: #999;
+    color: ${props => props.theme.color2};
     font-weight: bold;
   }
 

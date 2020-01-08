@@ -10,7 +10,7 @@ const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
 
   // Memoizing item price
-  const price = useMemo(() => formatPrice(product.price));
+  const price = useMemo(() => formatPrice(product.price), [product]);
 
   return (
     <ProductCard>

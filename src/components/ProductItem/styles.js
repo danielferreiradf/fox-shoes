@@ -15,7 +15,7 @@ export const ProductCard = styled.li`
   > strong {
     font-size: 16px;
     line-height: 20px;
-    color: #333;
+    color: ${props => props.theme.color5};
     margin-top: 5px;
   }
 
@@ -26,8 +26,8 @@ export const ProductCard = styled.li`
   }
 
   button {
-    background: #7159c1;
-    color: #fff;
+    background: ${props => props.theme.color2};
+    color: ${props => props.theme.color3};
     border: 0;
     border-radius: 4px;
     overflow: hidden;
@@ -38,7 +38,7 @@ export const ProductCard = styled.li`
     transition: filter 0.3s;
 
     &:hover {
-      filter: saturate(3);
+      filter: brightness(125%);
     }
 
     div {

@@ -5,10 +5,13 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0;
+  padding: 35px 10px;
+  margin-bottom: 10px;
+  border-bottom: 5px solid #fff;
+  border-radius: 5px;
 
   img {
-    width: 180px;
+    width: 250px;
     color: #fff;
   }
 `;

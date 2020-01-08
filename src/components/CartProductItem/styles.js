@@ -11,7 +11,7 @@ export const ProductCart = styled.tr`
   }
 
   strong {
-    color: #333;
+    color: ${props => props.theme.color1};
     display: block;
   }
 

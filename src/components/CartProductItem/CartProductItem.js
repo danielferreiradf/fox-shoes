@@ -38,7 +38,7 @@ const CartProductItem = ({ product }) => {
             type="button"
             onClick={() => changeProductAmount(product, "decrement")}
           >
-            <MdRemoveCircleOutline size={20} color="#7159c1" />
+            <MdRemoveCircleOutline size={20} color="#50211c" />
           </button>
 
           <input type="number" readOnly value={product.amount} />
@@ -47,7 +47,7 @@ const CartProductItem = ({ product }) => {
             type="button"
             onClick={() => changeProductAmount(product, "increment")}
           >
-            <MdAddCircleOutline size={20} color="#7159c1" />
+            <MdAddCircleOutline size={20} color="#50211c" />
           </button>
         </div>
       </td>
@@ -59,7 +59,7 @@ const CartProductItem = ({ product }) => {
           type="button"
           onClick={() => dispatch(removeFromCart(product.id))}
         >
-          <MdDelete size={20} color="#7159c1" />
+          <MdDelete size={20} color="#50211c" />
         </button>
       </td>
     </ProductCart>
