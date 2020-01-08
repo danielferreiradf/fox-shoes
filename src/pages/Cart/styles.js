@@ -12,7 +12,7 @@ export const Container = styled.div`
     align-items: center;
 
     button {
-      background: #7159c1;
+      background: ${props => props.theme.color1};
       color: #fff;
       border: 0;
       border-radius: 4px;
