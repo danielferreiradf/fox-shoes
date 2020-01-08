@@ -1,13 +1,12 @@
 import React from "react";
-import {
-  MdRemoveCircleOutline,
-  MdAddCircleOutline,
-  MdDelete
-} from "react-icons/md";
+import { useSelector } from "react-redux";
 
+import CartProductItem from "../../components/CartProductItem/CartProductItem";
 import { Container, ProductTable, Total } from "./styles";
 
 const Cart = () => {
+  const cartItems = useSelector(state => state.cart);
+
   return (
     <Container>
       <ProductTable>
@@ -21,37 +20,9 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <img
-                src="https://static.netshoes.com.br/produtos/tenis-nike-downshifter-9-masculino/26/HZM-1276-026/HZM-1276-026_zoom1.jpg"
-                alt="Tenis"
-              />
-            </td>
-            <td>
-              <strong>Tenis 1</strong>
-              <span>R$ 129,90</span>
-            </td>
-            <td>
-              <div>
-                <button type="button">
-                  <MdRemoveCircleOutline size={20} color="#7159c1" />
-                </button>
-                <input type="number" readOnly value={1} />
-                <button type="button">
-                  <MdAddCircleOutline size={20} color="#7159c1" />
-                </button>
-              </div>
-            </td>
-            <td>
-              <strong>R$ 258,80</strong>
-            </td>
-            <td>
-              <button type="button">
-                <MdDelete size={20} color="#7159c1" />
-              </button>
-            </td>
-          </tr>
+          {cartItems.map(product => (
+            <CartProductItem key={product.id} product={product} />
+          ))}
         </tbody>
       </ProductTable>
 

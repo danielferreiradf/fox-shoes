@@ -36,7 +36,7 @@ export const ProductTable = styled.table`
     padding: 12px;
   }
 
-  tbody td {
+  /* tbody td {
     padding: 12px;
     border-bottom: 1px solid #eee;
   }
@@ -74,7 +74,7 @@ export const ProductTable = styled.table`
     background: none;
     border: 0;
     padding: 6px;
-  }
+  } */
 `;
 
 export const Total = styled.div`

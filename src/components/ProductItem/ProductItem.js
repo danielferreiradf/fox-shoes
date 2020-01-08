@@ -13,7 +13,10 @@ const ProductItem = ({ product }) => {
   const price = useMemo(() => formatPrice(product.price));
 
   const handleAddProduct = product => {
-    dispatch({ type: "ADD_TO_CART", payload: product });
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { ...product, formattedPrice: price }
+    });
   };
 
   return (
