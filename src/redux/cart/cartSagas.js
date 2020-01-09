@@ -2,11 +2,12 @@ import { call, select, put, all, takeLatest } from "redux-saga/effects";
 import { toast } from "react-toastify";
 
 import api from "../../services/api";
+import history from "../../services/history";
 import { formatPrice } from "../../utils/format";
 
 import { addToCartSuccess, updateAmountSuccess } from "./cartActions";
 
-// Sagas receives the action object.
+// Sagas receives the action object
 function* addToCart({ payload }) {
   const productInCart = yield select(state =>
     state.cart.find(product => product.id === payload)
@@ -36,11 +37,11 @@ function* addToCart({ payload }) {
       priceFormatted: formatPrice(response.data.price)
     };
     yield put(addToCartSuccess(data));
+    history.push("/cart");
   }
 }
 
 function* updateAmount({ payload: { productId, amount } }) {
-  //   console.log(productId, amount);
   if (amount <= 0) return;
 
   const stock = yield call(api.get, `/stock/${productId}`);
