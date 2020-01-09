@@ -23,7 +23,6 @@ export default createGlobalStyle`
         max-width: 1020px;
         margin: 0 auto;
         padding: 0 20px 50px;
-        background: ${props => props.theme.color2};
     }
 
     button {

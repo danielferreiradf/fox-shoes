@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/cart/cartActions";
+import { addToCartRequest } from "../../redux/cart/cartActions";
 
 import { formatPrice } from "../../utils/format";
 import { MdAddShoppingCart } from "react-icons/md";
@@ -18,7 +18,10 @@ const ProductItem = ({ product }) => {
       <strong>{product.title}</strong>
       <span>{price}</span>
 
-      <button type="button" onClick={() => dispatch(addToCart(product))}>
+      <button
+        type="button"
+        onClick={() => dispatch(addToCartRequest(product.id))}
+      >
         <div>
           <MdAddShoppingCart size={16} color="#fff" />
         </div>
