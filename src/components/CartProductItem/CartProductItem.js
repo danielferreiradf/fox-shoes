@@ -6,6 +6,7 @@ import {
 } from "../../redux/cart/cartActions";
 
 import { formatPrice } from "../../utils/format";
+
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
