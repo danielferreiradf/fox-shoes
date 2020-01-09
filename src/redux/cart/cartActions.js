@@ -10,6 +10,16 @@ export function removeFromCart(productId) {
   return { type: "@cart/REMOVE", payload: productId };
 }
 
-export function updateAmount(id, amount) {
-  return { type: "@cart/UPDATE_AMOUNT", payload: { id, amount } };
+export function updateAmountRequest(productId, amount) {
+  return {
+    type: "@cart/UPDATE_AMOUNT_REQUEST",
+    payload: { productId, amount }
+  };
+}
+
+export function updateAmountSuccess(productId, amount) {
+  return {
+    type: "@cart/UPDATE_AMOUNT_SUCCESS",
+    payload: { productId, amount }
+  };
 }

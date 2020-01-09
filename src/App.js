@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
+import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/global";
 import theme from "./styles/theme";
@@ -15,6 +16,7 @@ const App = () => {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+          <ToastContainer autoClose={3000} />
           <Header />
           <Routes />
         </ThemeProvider>

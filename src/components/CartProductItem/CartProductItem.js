@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeFromCart, updateAmount } from "../../redux/cart/cartActions";
+import {
+  removeFromCart,
+  updateAmountRequest
+} from "../../redux/cart/cartActions";
 
 import { formatPrice } from "../../utils/format";
 import {
@@ -17,9 +20,9 @@ const CartProductItem = ({ product }) => {
 
   const changeProductAmount = (product, option) => {
     if (option === "increment") {
-      dispatch(updateAmount(product.id, product.amount + 1));
+      dispatch(updateAmountRequest(product.id, product.amount + 1));
     } else if (option === "decrement") {
-      dispatch(updateAmount(product.id, product.amount - 1));
+      dispatch(updateAmountRequest(product.id, product.amount - 1));
     }
   };
 
