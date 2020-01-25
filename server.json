@@ -30,37 +30,37 @@
       "id": 1,
       "title": "Tênis de Caminhada Leve Confortável",
       "price": 199.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
+      "image": "https://i.ibb.co/Pj6MCwV/jd-121576-b.png"
     },
     {
       "id": 2,
       "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
       "price": 139.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
+      "image": "https://i.ibb.co/p11Z79c/jd-197126-b.png"
     },
     {
       "id": 3,
-      "title": "Tênis Adidas Duramo Lite 2.0",
+      "title": "Tênis Nike Lancamento 2.0",
       "price": 219.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
+      "image": "https://i.ibb.co/6gD42Wn/jd-340653-b.png"
     },
     {
       "id": 5,
       "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
       "price": 139.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
+      "image": "https://i.ibb.co/yVncg31/jd-341585-b.png"
     },
     {
       "id": 6,
-      "title": "Tênis Adidas Duramo Lite 2.0",
+      "title": "Tênis New Balance Lancamento",
       "price": 219.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
+      "image": "https://i.ibb.co/qx2PJrd/jd-342064-b.png"
     },
     {
       "id": 4,
       "title": "Tênis de Caminhada Leve Confortável",
       "price": 179.9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
+      "image": "https://i.ibb.co/yqGNhdG/jd-365743-b.png"
     }
   ]
 }
